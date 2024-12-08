@@ -1,0 +1,39 @@
+title: FinOps Framework на русском
+href: index.yaml
+navigation:
+  logo:
+    url: 'https://framework.finops360.ru'
+    dark:
+      icon: 'https://app.finops360.ru/assets/logo-DT7qRV1a.svg'
+    light:
+      icon: 'https://app.finops360.ru/assets/logo-DT7qRV1a.svg'
+  header:
+    leftItems:
+      - text: 'Продукт'
+        type: 'link'
+        url: 'https://finops360.ru'
+      - text: 'Помочь с переводом на Github'
+        type: 'link'
+        url: 'https://github.com:FinOps360HQ/framework'
+    rightItems:
+      - text: 'Other Link'
+        type: 'link'
+        url: 'ru/anotherpage.md'
+      - type: controls
+items: 
+  - name: Обзор
+    href: index.yaml
+  - name: Принципы
+    href: principles.yaml
+  - name: Роли
+    href: personas.yaml
+  - name: Этапы FinOps
+    href: phases.md
+  - name: Maturity model
+    href: maturity-model.md
+  - name: Domains (work in progress)
+    href: domains.md
+  - name: Возможности (work in progress)
+    href: capabilities.md
+  - name: Scopes (work in progress)
+    href: scopes.md

@@ -1,0 +1,58 @@
+blocks:
+  - type: 'header-block'
+    title: Обзор FinOps фреймворка
+    description: 'FinOps - это операционный фреймворк и культурная практика, которая максимизирует ценность облачных технологий для бизнеса, позволяет своевременно принимать решения на основе данных и обеспечивает финансовую подотчетность благодаря сотрудничеству между инженерными, финансовыми и бизнес-командами.'
+  - type: 'media-block'
+    media:
+      dark:
+        image: _assets/framework_overview.png
+      light:
+        image: _assets/framework_overview.png
+    largeMedia: true
+    mediaOnly: true
+    border: none
+  - type: card-layout-block
+    title: Исследуйте фреймворк
+    children:
+      - type: image-card
+        title: Принципы FinOps
+        text: Поймите принципы FinOps, основные ценности, которые движут финансовым облачным процессом.
+        image: _assets/principles.png
+        url: principles.yaml
+        border: line
+      - type: image-card
+        title: Роли FinOps
+        text: FinOps охватывает множество различных ролей, важно понимать их функции и требования.
+        image: _assets/personas.png
+        url: personas.yaml
+        border: line
+      - type: image-card
+        title: Этапы FinOps
+        text: 'Путь FinOps состоит из трех итеративных этапов: Информирование, Оптимизация и Эксплуатация (Operate). Узнайте больше о каждом этапе и о том, как начать.'
+        image: _assets/phases.png
+        url: phases.md
+        border: line
+      - type: image-card
+        title: Модель зрелости FinOps
+        text: 'Подход FinOps «Ползти, Идти, Бежать» позволяет организациям начинать с малого и постепенно увеличивать масштабы, охват и сложность по мере необходимости для бизнеса. Используйте этот ресурс для изучения более глубокой информации о модели зрелости FinOps.'
+        image: _assets/maturity_model.png
+        url: maturity-model.md
+        border: line
+      - type: image-card
+        title: Домены FinOps
+        text: Домены FinOps представляют собой сферу деятельности или знания. Каждая организация, внедряющая FinOps, будет выполнять действия во всех доменах FinOps.
+        image: _assets/domains.png
+        url: domains.md
+        border: line
+      - type: image-card
+        title: Возможности FinOps
+        text: FinOps Capabilities represents functional areas of activity in support of their corresponding FinOps Domains. Each Capability includes definitions, key personas, performance metrics, and functional activities involved in a real FinOps practice.
+        image: _assets/capabilities.png
+        url: capabilities.md
+        border: line
+      - type: image-card
+        title: Области FinOps
+        text: Область FinOps — это сегмент расходов, связанных с технологиями, к которому FinOps Практики применяют принципы FinOps.
+        image: _assets/scopes.png
+        url: scopes.md
+        border: line

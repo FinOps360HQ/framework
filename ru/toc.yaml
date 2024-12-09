@@ -1,7 +1,7 @@
 navigation:
   logo:
     url: "https://finops360.ru"
-    urlTitle: 'Вернуться на главную'
+    urlTitle: 'FinOps360'
     dark:
       icon: 'https://app.finops360.ru/assets/logo-DT7qRV1a.svg'
     light:

@@ -1,6 +1,6 @@
 blocks:
   - type: 'header-block'
-    title: FinOps Principles
+    title: Принципы FinOps
     image: "../_images/principles.png"
     description: >
       **FinOps Principles act as a north star, guiding the activities of our FinOps practice.**

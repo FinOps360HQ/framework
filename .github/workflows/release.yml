@@ -41,5 +41,6 @@ jobs:
           revision: "${{ github.sha }}"
           storage-bucket: ${{ vars.DIPLODOC_STORAGE_BUCKET }}
           storage-region: ${{ vars.DIPLODOC_STORAGE_REGION }}
+          storage-endpoint: ${{ vars.DIPLODOC_STORAGE_ENDPOINT }}
           storage-access-key-id: ${{ secrets.DIPLODOC_ACCESS_KEY_ID }}
           storage-secret-access-key: ${{ secrets.DIPLODOC_SECRET_ACCESS_KEY }}

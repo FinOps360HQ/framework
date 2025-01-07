@@ -1,65 +1,68 @@
-# FinOps Maturity Model
+# Модель зрелости
 
-The practice of FinOps is inherently iterative and maturity of any given process, functional activity, Capability or Domain will improve with repetition.
+FinOps-практики развиваются за счет итеративной работы над [Возможностями](https://framework.finops360.ru/ru/capabilities.html) и [Доменами](https://framework.finops360.ru/ru/domains.html) фреймворка. Это означает, что зрелость всех процессов, используемых для FinOps, растет постепенно, развиваясь с каждой новой итерацией.
 
-A «Crawl, Walk, Run» approach to performing FinOps enables organizations to start small, and grow in scale, scope, and complexity as business value warrants maturing a functional activity. Taking quick action at a small scale and limited scope allows FinOps teams to assess the outcomes of their actions, and to gain insights into the value of taking further action in a larger, faster, or more granular way.
+Упрощенная модель зрелости состоит из трех этапов: «Ползти», «Идти» и «Бежать» (Crawl, Walk, Run). Такой подход позволяет внедрять FinOps-практики постепенно, начиная с простых шагов и увеличивая масштаб и сложность процессов управления затратами на ИТ-ресурсы по мере получения бизнес-ценности.
 
-In assessing the state of an organization’s FinOps Capability or Domain, we can also use these maturity designations to identify where we are currently operating, and to identify areas we’d like to move from a Crawl to a Walk, or from a Walk to a Run maturity.
+Оценку текущего состояния  FinOps и определения текущего уровня зрелости можно использовать для формирования направлений, которые нужно развивать — от уровня «Ползти» к «Идти» или от «Идти» к «Бежать».
 
-These terms are general guidelines, and an organization’s goal should never be simply to achieve a “Run” maturity in every Capability.
+Модель зрелости может применяться при оценке текущего состояния FinOps в компании или состояния каждой из [Возможностей](https://framework.finops360.ru/ru/capabilities.html). Также её удобно использовать для определения направлений развития:  от уровня «Ползти» к «Идти» или от «Идти» к «Бежать».
 
-As the FinOps Principles tell us, business value should drive our decision making. An organization that has established “Walk” stage anomaly detection – which has proven adequate in detecting the few cost spikes the organization has previously experienced – should consider investing time evolving other FinOps Capabilities which could provide an immediate benefit. Effort spent maturing a Capability that is meeting the measurement of success could move an organization’s maturity in that individual capability from Crawl to Walk, or Walk to Run – but provide no benefit to the measurement of success.
+Модель зрелости носит рекомендательный характер, поэтому цель компании не должна сводиться исключительно к достижению уровня «Бежать» для каждой [Возможностей](https://framework.finops360.ru/ru/capabilities.html).
 
-In other words, establishing a Walk stage in a particular Capability is not necessarily a good or bad thing, FinOps practitioners should focus less on maturing each Capability to “Run” for everything and more on achieving the outcomes the FinOps Capabilities aim to provide.
+Согласно принципам FinOps, основой для принятия решений должна быть бизнес-ценность. Например, организация, достигшая стадии «Идти» в обнаружении аномалий (что доказало свою эффективность в выявлении скачков затрат на ИТ-ресурсы), может сосредоточить усилия на развитии других возможностей FinOps, которые принесут бизнес-ценность. Углубление зрелости Возможности, которая уже соответствует поставленным критериям успеха, может перевести её с уровня «Ползти» на «Идти» или с «Идти» на «Бежать», но при этом не принести дополнительной выгоды с точки зрения бизнеса. Таким образом и усилия направленные на развитие этой Возможности будут не эффективным.
 
-Prioritize maturing the Capabilities that provide your organization the highest business value.
+Другими словами, достижение уровня «Ходить» в определенной Возможности не является ни хорошим, ни плохим результатом. Ответственные за развитие FinOps должны сосредотачиваться не на достижении уровня «Бежать» для каждой Возможности, а на достижении тех результатов, ради которых предназначены Возможности FinOps.
 
-Every Capability and functional activity can be at a different level of maturity. There is a [FinOps Assessment](https://www.finops.org/wg/finops-assessment/) and the below rubric to help indicate where we think we are operating allows a convenient shorthand to communicate effectively.
+Повышайте приоритет для применения тех возможностей, которые приносят вашей организации наибольшую бизнес-ценность.
 
-## Crawl
+Каждая Возможность и активность в рамках FinOps может находиться на разном уровне зрелости. Для удобства оценки существует инструмент FinOps Assessment и представленное ниже описание уровней зрелости, которое помогает определить текущий уровень FinOps в компании и позволяет эффективно общаться на эту тему.
 
-### Maturity Level Characteristics
+## Ползти (Crawl)
 
-- Very little reporting and tooling
-- Measurements only provide insight into the benefits of maturing the capability
-- Basic KPIs set for the measurement of success
-- Basic processes and policies are defined around the capability
-- Capability is understood but not followed by all the major teams within the organization
-- Plans to address “low hanging fruit”
+### Характеристики уровня зрелости
 
-### Sample goals/KPI from [the FinOps Community (data.finops.org)](https://data.finops.org/)
+- Очень мало инструментов и отчетов для эффективного управления затратами на ИТ-ресурсы. Это значит, что для отслеживания расходов и анализа данных используются простые или даже ручные методы. Например, “Excel” или “Google Таблицы” вместо специализированных сервисов которые автоматически собирают, анализируют и предоставляют данные в виде рекомендаций, отчетов и графиков.
+- Существующие метрики показывают только косвенное представление о преимуществах развития возможностей FinOps.
+- Базовые ключевые показатели эффективности (KPI) для измерения эффективности затрат на ИТ
+- Базовые процессы и политики определяются вокруг возможностей
+- Возможности FinOps понятны, но не соблюдаются всеми основными командами в организации.
+- Подготовлены планы развития FinOps-практик проранжированные с точки зрения простоты реализации и максимизации бизнес-ценности. На этом этапе важно фокусироваться на очевидных и простых шагах, которые дадут быстрый эффект вместо затратных активностей которые покажут большую бизнес-ценность но в отдаленной перспективе.
 
-- Should be able to allocate at least 50%
-- Resource-based commitments discount target coverage of approximately 60%
-- Forecast spend to actual spend accuracy variance is 20%
+### Пример целей/KPI из сообщества FinOps ([data.finops.org](https://data.finops.org/)):
 
-## Walk
+- Должны уметь распределять хотя бы 50% затрат на ИТ по центрам затрат.
+- Примерно 60% потребляемых ИТ-ресурсов учитывают скидки на резервирование (скидка за предоплату, долгосрочные контракты и пр.).
+- Отклонение прогноза по расходам от фактических расходов (в год/месяц) составляет меньше 20%.
 
-### Maturity Level Characteristics
+## Идти (Walk)
 
-- Capability is understood and followed within the organization
-- Difficult edge cases are identified but decision to not address them is adopted
-- Automation and/or processes cover most of the Capability requirements
-- Most difficult edge cases (ones that threaten the financial well-being of the organization) are identified and effort to resolve has been estimated
-- Medium to high goals/KPIs set on the measurement of success
+### Характеристики уровня зрелости:
 
-### Sample goals/KPI from [the FinOps Community (data.finops.org)](https://data.finops.org/)
+- Возможности FinOps понятны сотрудникам компании и используются на практике.
+- Для управления затратами применяется Автоматизация а процессы FinOps охватывают большинство Возможностей.
+- Выявлены “сложные ситуации”, например, требующие дополнительной нагрузки на DevOps-администраторов или переговоров с поставщиком облачной инфраструктуры, но решение которых пока не найдено.
+- Самые важные “сложные ситуации” (угрожающие финансовому состоянию компании) выявлены, и проведена совместная оценка усилий по их решению.
+- Средние и высокие цели/KPI установлены для измерения успеха.
 
-- Should be able to allocate at least 80%
-- Resource-based commitments discount target coverage is approximately 70%
-- Forecast spend to actual spend accuracy variance is 15%
+### Пример целей/KPI из сообщества FinOps ([data.finops.org](https://data.finops.org/)):
 
-## Run
+- Должны уметь распределять не менее 80% затрат.
+- Примерно 70% потребляемых ИТ-ресурсов учитывают скидки на резервирование (скидка за предоплату, долгосрочные контракты и пр.).
+- Отклонение прогноза по расходам от фактических расходов (в год/месяц) составляет меньше 15%.
 
-### Maturity Level Characteristics
+## Бежать (Run)
 
-- Capability is understood and followed by all teams within the organization
-- Difficult edge cases are being addressed
-- Very high goals/KPIs set on the measurement of success
-- Automation is the preferred approach
+### Характеристики уровня зрелости:
 
-### Sample goals/KPI from [the FinOps Community (data.finops.org)](https://data.finops.org/)
+- Возможности FinOps используются на практике всеми командами компании.
+- Выявленные самые важные “сложные ситуации” решаются.
+- Очень высокие цели/KPI установлены для измерения успеха.
+- Большинство процессов FinOps автоматизировано и требует минимального участия сотрудников.
 
-- Greater than 90% of spend can be allocated
-- Resource-based commitments discount target coverage is approximately 80%
-- Forecast spend to actual spend accuracy variance is 12%
+### Пример целей/KPI из сообщества FinOps ([data.finops.org](https://data.finops.org/)):
+
+- Более 90% расходов на ИТ распределены по центрам затрат.
+- Примерно 80% потребляемых ИТ-ресурсов учитывают скидки на резервирование (скидка за предоплату, долгосрочные контракты и пр.).
+- Отклонение прогноза по расходам от фактических расходов составляет 12%.
+

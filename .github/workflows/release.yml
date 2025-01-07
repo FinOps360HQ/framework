@@ -59,4 +59,5 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         run: |
           echo $PWD
-          aws --endpoint-url=${{ secrets.ENDPOINT_URL }} s3 sync . s3://${{ secrets.BUCKET_NAME }}
+          ls -lah
+          aws --endpoint-url=${{ secrets.ENDPOINT_URL }} s3 sync . s3://${{ secrets.BUCKET_NAME }} --delete

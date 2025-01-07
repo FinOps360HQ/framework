@@ -11,37 +11,47 @@ jobs:
   check-env:
     runs-on: ubuntu-latest
     steps:
-      - name: "Check is DIPLODOC_STORAGE_BUCKET secret exists"
+      - name: "Check if endpoint_url secret exists"
         env:
-          storage-bucket: ${{ vars.DIPLODOC_STORAGE_BUCKET }}
-        if: ${{ env.storage-bucket == '' }}
-        run: 'echo "::error:: The variable \"DIPLODOC_STORAGE_BUCKET\" has not been made; please check that all necessary secrets and variables are installed or follow the link https://diplodoc.com/quickstart" && exit 1'
-  build:
+          endpoint_url: ${{ vars.ENDPOINT_URL }}
+        if: ${{ env.endpoint_url == '' }}
+        run: 'echo "::error:: The variable \"ENDPOINT_URL\" is empty" && exit 1'
+
+      - name: "Check if bucket_name secret exists"
+        env:
+          bucket_name: ${{ vars.BUCKET_NAME }}
+        if: ${{ env.bucket_name == '' }}
+        run: 'echo "::error:: The variable \"BUCKET_NAME\" is empty" && exit 1'
+
+      - name: "Check if aws_access_key_id secret exists"
+        env:
+          aws_access_key_id: ${{ vars.AWS_ACCESS_KEY_ID }}
+        if: ${{ env.aws_access_key_id == '' }}
+        run: 'echo "::error:: The variable \"AWS_ACCESS_KEY_ID\" is empty" && exit 1'
+
+      - name: "Check if aws_secret_access_key secret exists"
+        env:
+          aws_secret_access_key: ${{ vars.AWS_SECRET_ACCESS_KEY }}
+        if: ${{ env.aws_secret_access_key == '' }}
+        run: 'echo "::error:: The variable \"AWS_SECRET_ACCESS_KEY\" is empty" && exit 1'
+  release:
     needs: check-env
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+      - name: Install requriments
+        run: |
+          npm i @diplodoc/cli -g
+          curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+          unzip awscliv2.zip
+          sudo ./aws/install --bin-dir /usr/local/bin --install-dir /usr/local/aws-cli --update
+
       - name: Build
-        uses: diplodoc-platform/docs-build-action@v2
-        with:
-          revision: "${{ github.sha }}"
-          server: ${{ vars.DIPLODOC_STORAGE_ENDPOINT }}
-          storage-endpoint: ${{ vars.DIPLODOC_STORAGE_ENDPOINT }}
-          storage-region: ${{ vars.DIPLODOC_STORAGE_REGION }}
-          storage-bucket: ${{ vars.DIPLODOC_STORAGE_BUCKET }}
-          storage-access-key-id: ${{ secrets.DIPLODOC_ACCESS_KEY_ID }}
-          storage-secret-access-key: ${{ secrets.DIPLODOC_SECRET_ACCESS_KEY }}
-  release:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
+        run: |
+          rm -rf docs-html; yfm -i ./ -o ./docs-html
+
       - name: Release
-        uses: diplodoc-platform/docs-release-action@v2
-        with:
-          revision: "${{ github.sha }}"
-          storage-bucket: ${{ vars.DIPLODOC_STORAGE_BUCKET }}
-          storage-region: ${{ vars.DIPLODOC_STORAGE_REGION }}
-          server: ${{ vars.DIPLODOC_STORAGE_ENDPOINT }}
-          storage-access-key-id: ${{ secrets.DIPLODOC_ACCESS_KEY_ID }}
-          storage-secret-access-key: ${{ secrets.DIPLODOC_SECRET_ACCESS_KEY }}
+        run: |
+          echo ${ENDPOINT_URL}
+          aws --endpoint-url=${ENDPOINT_URL} s3 sync . s3://${BUCKET_NAME}

@@ -13,25 +13,25 @@ jobs:
     steps:
       - name: "Check if endpoint_url secret exists"
         env:
-          endpoint_url: ${{ vars.ENDPOINT_URL }}
+          endpoint_url: ${{ secrets.ENDPOINT_URL }}
         if: ${{ env.endpoint_url == '' }}
         run: 'echo "::error:: The variable \"ENDPOINT_URL\" is empty" && exit 1'
 
       - name: "Check if bucket_name secret exists"
         env:
-          bucket_name: ${{ vars.BUCKET_NAME }}
+          bucket_name: ${{ secrets.BUCKET_NAME }}
         if: ${{ env.bucket_name == '' }}
         run: 'echo "::error:: The variable \"BUCKET_NAME\" is empty" && exit 1'
 
       - name: "Check if aws_access_key_id secret exists"
         env:
-          aws_access_key_id: ${{ vars.AWS_ACCESS_KEY_ID }}
+          aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         if: ${{ env.aws_access_key_id == '' }}
         run: 'echo "::error:: The variable \"AWS_ACCESS_KEY_ID\" is empty" && exit 1'
 
       - name: "Check if aws_secret_access_key secret exists"
         env:
-          aws_secret_access_key: ${{ vars.AWS_SECRET_ACCESS_KEY }}
+          aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         if: ${{ env.aws_secret_access_key == '' }}
         run: 'echo "::error:: The variable \"AWS_SECRET_ACCESS_KEY\" is empty" && exit 1'
   release:

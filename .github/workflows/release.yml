@@ -41,6 +41,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Install requriments
+        working-directory: "/tmp"
         run: |
           npm i @diplodoc/cli -g
           curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
@@ -57,4 +58,5 @@ jobs:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         run: |
+          echo $PWD
           aws --endpoint-url=${{ secrets.ENDPOINT_URL }} s3 sync . s3://${{ secrets.BUCKET_NAME }}

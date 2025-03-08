@@ -1,2 +1,4 @@
 allowHTML: true
 langs: ['ru']
+docs-viewer:
+  metrika: [100256989]

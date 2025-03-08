@@ -43,14 +43,14 @@ jobs:
       - name: Install requriments
         working-directory: "/tmp"
         run: |
-          npm i @diplodoc/cli@4.48.1 -g
+          npm i @diplodoc/cli@4.55.1 -g
           curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
           unzip awscliv2.zip
           sudo ./aws/install --bin-dir /usr/local/bin --install-dir /usr/local/aws-cli --update
 
       - name: Build
         run: |
-          rm -rf docs-html; yfm -i ./ -o ./docs-html
+          rm -rf docs-html; yfm -i ./ -o ./docs-html --allow-custom-resources
 
       - name: Release
         working-directory: "./docs-html"
